@@ -8,7 +8,7 @@ const allProductsList = ref<Product[]>([])
 const getAllProducts = async () => {
   try {
     const response = await get_all_products()
-    console.log(response)
+    // console.log(response)
     allProductsList.value = response
   } catch (error) { }
 }
