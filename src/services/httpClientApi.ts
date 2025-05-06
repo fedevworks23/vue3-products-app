@@ -19,4 +19,14 @@ const get_single_product = async (id: string) => {
   }
 }
 
-export { get_all_products, get_single_product }
+const get_product_by_category = async (categoryName: string) => {
+  try {
+    const { data } = await httpClient.get(`/products/category/${categoryName}`)
+    return data
+  } catch (error) {
+    console.log(error);
+
+  }
+}
+
+export { get_all_products, get_single_product, get_product_by_category }
