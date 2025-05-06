@@ -20,7 +20,8 @@
 
       <p>Brand: {{ productDetail?.brand }}</p>
 
-      <p>Category: {{ captalise(productDetail?.category) }}</p>
+      <p @click="router.push(`/category/${productDetail?.category}`)">Category: {{ captalise(productDetail?.category) }}
+      </p>
 
       <p>Rating: {{ productDetail?.rating }}</p>
       <p>Stock: {{ productDetail?.stock }}</p>
@@ -44,6 +45,7 @@ import { onMounted, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { get_single_product } from '../services/httpClientApi'
 import type { Product } from '../Types/AllProducts.interface'
+import router from '../router'
 
 const route = useRoute()
 
@@ -62,7 +64,7 @@ watch(
 )
 
 onMounted(() => {
-  id.value = route.params.id
+  id.value = route.params.id;
 })
 </script>
 
