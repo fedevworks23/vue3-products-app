@@ -1,8 +1,8 @@
 <template>
 
-    <div class=" flex flex-wrap">
+    <div class=" flex flex-wrap jsqa">
         <JavascriptTitle></JavascriptTitle>
-        <div class="w-[70%] bg-amber-300 text-black">
+        <div class="w-[80%] bg-amber-300 text-black">
             <router-view></router-view>
         </div>
     </div>
@@ -13,4 +13,8 @@ import JavascriptTitle from './JavasciptTitle.vue'
 
 </script>
 
-<style scoped></style>
+<style scoped>
+.jsqa {
+    height: 100vh;
+}
+</style>

@@ -9,9 +9,9 @@ import ProductsDetails from '../components/ProductsDetails.vue'
 
 
 // Javascript Coding
-const JavascriptComponent = () => import('../components/JavascriptComponent/Javscript.vue')
+const JavascriptComponent = () => import('../components/JavascriptComponent/Javascript.vue')
 const JavasciptTitle = () => import('../components/JavascriptComponent/JavasciptTitle.vue')
-const JavascriptCoding = () => import('../components/JavascriptComponent/JavascriptCoding.vue')
+const JavasciptAnswer = () => import('../components/JavascriptComponent/JavasciptAnswer.vue')
 
 
 
@@ -23,9 +23,13 @@ const routes = [
   { path: '/projects', component: Projects },
   { path: '/all-products', component: AllProducts },
   { path: '/productDetails/:id', component: ProductsDetails },
-  { path: '/javascript', component: JavascriptComponent },
-  { path: '/javascript-title', component: JavasciptTitle },
-  { path: '/javascript-coding', component: JavascriptCoding },
+  {
+    path: '/javascript', name: 'javascript', component: JavascriptComponent,
+    children: [
+      { path: '/javascript-title', component: JavasciptTitle },
+      { path: '/javascript-coding/:id', component: JavasciptAnswer },
+    ],
+  },
   { path: '/:pathMatch(.*)*', component: PageNotFound },
 ]
 
