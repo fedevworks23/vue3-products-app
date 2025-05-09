@@ -1,6 +1,7 @@
 <template>
     <div>
-        All Categories
+        <router-link to='/'>Goto Home</router-link>
+        Page Not Fount
     </div>
 </template>
 

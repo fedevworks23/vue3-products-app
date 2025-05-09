@@ -3,3 +3,12 @@
 @theme {
   --font-poppins: Poppins, sans-serif;
 }
+
+body{
+  background-color: #000000;
+}
+
+#app {
+  min-height: 100dvh;
+  color: #ffffff;
+}
