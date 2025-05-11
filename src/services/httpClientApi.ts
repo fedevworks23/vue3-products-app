@@ -1,8 +1,9 @@
 import httpClient from '../common/interceptor'
 
-const get_all_products = async () => {
+
+const get_products_by_limit = async (limit: number, skip: number) => {
   try {
-    const { data } = await httpClient.get('/products')
+    const { data } = await httpClient.get('/products' + `?limit=${limit}&skip=${skip}`)
     return data.products
   } catch (err) {
     console.log(err)
@@ -29,4 +30,4 @@ const get_product_by_category = async (categoryName: string) => {
   }
 }
 
-export { get_all_products, get_single_product, get_product_by_category }
+export {  get_single_product, get_product_by_category, get_products_by_limit }

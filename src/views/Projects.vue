@@ -1,18 +1,19 @@
 <template>
-    <div class="m-auto w-[80%]">
-        <div class="my-7 text-center">Projects</div>
-        <hr>
-        <div class=" mt-10">
-            <router-link to='/all-products'>Products Api</router-link>
-            <br>
-            <router-link to='/javascript'>Javascript Coding</router-link>
-        </div>
+  <TopicTitle>
+    <template #title> Projects </template>
 
-    </div>
+    <template #default>
+      <div class="mt-5">
+        <router-link to="/all-products">Products Api</router-link>
+        <br />
+        <router-link to="/javascript">Javascript Coding</router-link>
+      </div>
+    </template>
+  </TopicTitle>
 </template>
 
 <script setup lang="ts">
-
+import TopicTitle from '../components/Custom/TopicTitle.vue'
 </script>
 
 <style scoped></style>
