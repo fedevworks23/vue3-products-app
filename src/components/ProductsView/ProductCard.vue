@@ -7,7 +7,7 @@
           <img class="rounded-2xl w-[160px] h-[160px]" :src="product.thumbnail" alt="" />
         </div>
         <div class="flex flex-col items-center m-4">
-          <div>{{ product.title }}</div>
+          <div class="flex items-center h-[50px]">{{ product.title }}</div>
           <div>Category: {{ capitalizeFirstLetter(product.category) }}</div>
           <button class="bg-[var(--buttonClick)] hover:bg-[var(--buttonHover)] my-2 p-2 border-[var(--card-background)] border-2 rounded-lg w-[150px] font-bold cursor-pointer" @click="$router.push(`/productDetails/${product.id}`)">
             View Details
