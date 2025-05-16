@@ -32,13 +32,13 @@ onMounted(() => {
       <div class="flex flex-row-reverse">
         <button
           @click="nextList()"
-          class="my-3 cursor-pointer rounded-2xl border-2 border-amber-300 px-5 py-1 hover:bg-amber-300 hover:text-black"
+          class="hover:bg-amber-300 my-3 px-5 py-1 border-2 border-amber-300 rounded-2xl hover:text-black cursor-pointer"
         >
           Next
         </button>
         <button
           @click="prevList()"
-          class="my-3 mr-2 cursor-pointer rounded-2xl border-2 border-amber-300 px-5 py-1 hover:bg-amber-300 hover:text-black"
+          class="hover:bg-amber-300 my-3 mr-2 px-5 py-1 border-2 border-amber-300 rounded-2xl hover:text-black cursor-pointer"
         >
           Prev
         </button>
@@ -48,19 +48,22 @@ onMounted(() => {
   </TopicTitle>
 
   <!-- <span v-pre>{{ <div>sadasd</div> this will not be compiled }}</span> -->
-  <div
-    class="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
-  >
-    <div
-      class="m-1 p-1"
-      v-for="product in productsList"
-      :key="product.id"
-      v-memo="[product.thumbnail]"
-      v-cloak
-    >
-      <ProductCard :product="product" />
-    </div>
-  </div>
+   <div class="m-auto mt-1 w-[90%]">
+
+     <div
+       class="gap-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
+     >
+       <div
+         class="m-1 p-1"
+         v-for="product in productsList"
+         :key="product.id"
+         v-memo="[product.thumbnail]"
+         v-cloak
+       >
+         <ProductCard :product="product" />
+       </div>
+     </div>
+   </div>
 </template>
 
 <style lang="css" scoped>

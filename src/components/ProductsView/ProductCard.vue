@@ -1,19 +1,15 @@
 <template>
     <div class="product-card">
       <div
-        class="justify-items-center content-center text-center min-w-[250px] min-h-[328px] h-[100%] rounded-2xl border-2 border-amber-400"
+        class="justify-items-center content-center border-[var(--card-background)] border-2 rounded-2xl h-[100%] min-h-[328px] text-center"
         v-cloak>
-        <div class="h-auto w-40 rounded-full">
+        <div class="rounded-full w-40 h-auto">
           <img class="rounded-2xl" :src="product.thumbnail" alt="" />
         </div>
-        <div class="m-4 flex flex-col items-center">
+        <div class="flex flex-col items-center m-4">
           <div>{{ product.title }}</div>
           <div>Category: {{ capitalizeFirstLetter(product.category) }}</div>
-          <button class="my-2 cursor-pointer rounded-2xl font-bold p-2 border-2 w-[150px]
-            text-black
-            hover:text-amber-300
-            bg-amber-300
-            hover:bg-black" @click="$router.push(`/productDetails/${product.id}`)">
+          <button class="bg-[var(--buttonClick)] hover:bg-[var(--buttonHover)] my-2 p-2 border-[var(--card-background)] border-2 rounded-lg w-[150px] font-bold cursor-pointer" @click="$router.push(`/productDetails/${product.id}`)">
             View Details
           </button>
         </div>

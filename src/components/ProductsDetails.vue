@@ -5,40 +5,45 @@
     <template #default>
       <div class="flex flex-row-reverse">
         <button
-        class="my-3 cursor-pointer rounded-2xl border-2 border-amber-300 px-5 py-1 hover:bg-amber-300 hover:text-black"
-        @click="goBack"
-      >
-        Back
-      </button>
+          class="hover:bg-amber-300 my-3 px-5 py-1 border-[var(--buttonNormal)] border-2 rounded-2xl hover:text-black cursor-pointer"
+          @click="goBack"
+        >
+          Back
+        </button>
       </div>
     </template>
   </TopicTitle>
-  
+
   <template v-if="!productDetail">Loading</template>
 
-  <div class="m-auto mt-4 w-[80%]" v-else>
-
+  <div class="bg-[var(--card-background)] m-auto mt-4 w-[80%]" v-else>
     <div
-      class="mx-auto my-10 flex flex-wrap justify-center rounded-2xl border-2 border-[#383838] p-3 text-amber-50"
+      class="flex xl:flex-row flex-col items-center shadow-[#ffffff] mx-auto my-10 p-3 border-[var(--buttonNormal)] border-2 rounded-2xl text-[var(--text-color)]"
     >
-      <div class="mb-3 w-[30%]">
+      <div
+        class="top-[-70px] xl:top-0 xl:left-[-5%] relative flex xl:flex-initial justify-center bg-[var(--bgColor)] mb-3 border-[var(--buttonNormal)] border-2 rounded-full lg:rounded-2xl transition-all duration-900 ease-in-out"
+      >
         <img
           class="w-[300px]"
           :src="productDetail?.thumbnail"
           :alt="productDetail?.title"
         />
       </div>
-      <div class="ml-2 flex flex-col justify-center">
-        <p class="text-3xl font-medium">{{ productDetail?.title }}</p>
-        <p class="text-2xl font-normal">
+      <div
+        class="flex flex-col flex-none xl:flex-1 justify-center ml-2 text-[var(--card-subtext)]"
+      >
+        <p class="font-medium text-[var(--white)] text-2xl">
+          {{ productDetail?.title }}
+        </p>
+        <p class="font-normal text-lg">
           {{ productDetail?.description }}
         </p>
         <p class="">
-          <span class="text-1xl font-medium text-red-700"
+          <span class="font-medium text-red-700 text-xl"
             >-{{ productDetail?.discountPercentage }}%</span
           >
           &nbsp;
-          <span class="text-2xl font-semibold"
+          <span class="font-semibold text-[14px]"
             >$ {{ productDetail?.price }}</span
           >
         </p>

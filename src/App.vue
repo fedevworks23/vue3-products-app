@@ -3,10 +3,13 @@ import Navbar from './components/Navbar/Navbar.vue';
 </script>
 
 <template>
-  <header class="sticky top-0 m-auto max-w-[100%] bg-[#1D1D1D] p-2 text-center text-3xl font-bold text-white shadow-md">
+  <header class="poppins-bold pt-2 mx-auto rounded-full p-2 sticky top-0 w-[50%] bg-[var(--gluon-grey)] text-center text-3xl font-bold shadow-md">
     <Navbar />
   </header>
   <router-view></router-view>
 </template>
 
 <style scoped></style>
+
+
+https://in.pinterest.com/pin/9148005521139338/

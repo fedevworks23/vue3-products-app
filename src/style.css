@@ -1,14 +1,55 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-@theme {
+:root {
   --font-poppins: Poppins, sans-serif;
+  --golden-amber: #ffab57;
+  --grey-brown: #606060;
+  --charcoal-grey: #2a2a2a;
+  --silver-grey: #c0c0c0;
+  --stone-grey: #808080;
+
+  --dark-void: #151419;        /* fixed typo */
+  --liquid-lava: #f56e0f;
+  --gluon-grey: #1b1b1e;
+  --slate-grey: #262626;
+  --dusty-grey: #878787;       /* added # */
+  --snow: #fbfbfb;
+
+  --black: #000000;
+  --white: #ffffff;
+  --white-1: #f7f8fa;
+  --purple: #6a0dad;
+
+  --bgColor: #1A1E29;
+  --primaryColor: #4E59C3;
+  --card-background: #272E3E;
+  --card-subtext: #A0A3B1;
+
+  --buttonClick: #4E59C3;
+  --buttonHover: #626EDE;
+  --buttonNormal: #7884F4;
 }
 
-body{
-  background-color: #000000;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+  /* border: 0 solid; */
+}
+
+body {
+  color: var(--white);
+  background-color: var(--bgColor);
+
+  font-optical-sizing: auto;
+  /* font-weight: <weight>; */
+  font-style: normal;
+  font-family: 'Poppins', sans-serif;
 }
 
 #app {
   min-height: 100vh;
-  color: #ffffff;
 }
+
+/* Follow this page */
+/* https://in.pinterest.com/pin/584623595415303806/ */

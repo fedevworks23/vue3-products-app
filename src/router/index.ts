@@ -4,7 +4,7 @@ import HomePage from '../views/HomePage.vue'
 
 // Products View Routes
 const Projects = () => import('../views/Projects.vue')
-import AllProducts from '../components/ProductsView/AllProducts.vue'
+import ProductLists from '../components/ProductsView/ProductLists.vue'
 import ProductsDetails from '../components/ProductsDetails.vue'
 
 
@@ -16,12 +16,12 @@ const JavasciptAnswer = () => import('../components/JavascriptComponent/Javascip
 
 
 // Page Not Found View
-import PageNotFound from '../components/PageNotFound.vue'
+import PageNotFound from '../views/PageNotFound.vue'
 
 const routes = [
   { path: '/', component: HomePage },
   { path: '/projects', component: Projects },
-  { path: '/all-products', component: AllProducts },
+  { path: '/product-lists', component: ProductLists },
   { path: '/productDetails/:id', component: ProductsDetails },
   {
     path: '/javascript', name: 'javascript', component: JavascriptComponent,
@@ -34,6 +34,7 @@ const routes = [
 ]
 
 const router = createRouter({
+  linkActiveClass: 'text-[16px]/normal  bg-[var(--golden-amber)] rounded-full text-[var(--charcoal-grey)]',
   history: createWebHistory(),
   routes,
 })
