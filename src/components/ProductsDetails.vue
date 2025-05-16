@@ -2,10 +2,10 @@
   <TopicTitle>
     <template #title> Product Details </template>
 
-    <template #default>
+    <template #buttons>
       <div class="flex flex-row-reverse">
         <button
-          class="hover:bg-amber-300 my-3 px-5 py-1 border-[var(--buttonNormal)] border-2 rounded-2xl hover:text-black cursor-pointer"
+          class="bg-[var(--backgroundColor)] hover:bg-[var(--card-background)] my-3 mr-2 px-5 py-2 border-[var(--card-subtext)] border-2 rounded-[8px] font-bold hover:text-[var(--card-subtext)] cursor-pointer"
           @click="goBack"
         >
           Back
@@ -21,7 +21,7 @@
       class="flex xl:flex-row flex-col items-center shadow-[#ffffff] mx-auto my-10 p-3 border-[var(--buttonNormal)] border-2 rounded-2xl text-[var(--text-color)]"
     >
       <div
-        class="top-[-70px] xl:top-0 xl:left-[-5%] relative flex xl:flex-initial justify-center bg-[var(--bgColor)] mb-3 border-[var(--buttonNormal)] border-2 rounded-full lg:rounded-2xl transition-all duration-900 ease-in-out"
+        class="top-[-70px] xl:top-0 xl:left-[-5%] relative flex xl:flex-initial justify-center bg-[var(--backgroundColor)] mb-3 border-[var(--buttonNormal)] border-2 rounded-full lg:rounded-2xl transition-all duration-900 ease-in-out"
       >
         <img
           class="w-[300px]"

@@ -6,7 +6,7 @@
       <div class="flex flex-wrap mt-5">
         <template v-for="project in projectsLinks" :key="project.id">
           <router-link :to="project.link"
-            class="flex justify-center bg-[var(--card-background)] hover:bg-[var(--bgColor)] shadow-lg dark:shadow-none mx-2 p-6 rounded-xl outline outline-[var(--card-subtext)] w-[20%] max-w-sm"
+            class="flex justify-center bg-[var(--card-background)] hover:bg-[var(--backgroundColor)] shadow-lg dark:shadow-none mx-2 p-6 rounded-xl outline outline-[var(--card-subtext)] w-[30%] max-w-sm"
         >
           <div>
             <div class="font-medium text-black dark:text-white text-xl">

@@ -27,43 +27,44 @@ onMounted(() => {
   <TopicTitle>
     <template #title> Products List </template>
 
-    <template #default>
+    <template #buttons>
       <!-- Paginations -->
       <div class="flex flex-row-reverse">
         <button
           @click="nextList()"
-          class="hover:bg-amber-300 my-3 px-5 py-1 border-2 border-amber-300 rounded-2xl hover:text-black cursor-pointer"
+          class="bg-[var(--backgroundColor)] hover:bg-[var(--card-background)] my-3 mr-2 px-5 py-2 border-[var(--card-subtext)] border-2 rounded-[8px] font-bold hover:text-[var(--card-subtext)] cursor-pointer"
         >
           Next
         </button>
         <button
           @click="prevList()"
-          class="hover:bg-amber-300 my-3 mr-2 px-5 py-1 border-2 border-amber-300 rounded-2xl hover:text-black cursor-pointer"
+          class="bg-[var(--backgroundColor)] hover:bg-[var(--card-background)] my-3 mr-2 px-5 py-2 border-[var(--card-subtext)] border-2 rounded-[8px] font-bold hover:text-[var(--card-subtext)] cursor-pointer"
         >
           Prev
         </button>
       </div>
       <!-- Paginations End -->
     </template>
+
+    <template #default>
+      <!-- <span v-pre>{{ <div>sadasd</div> this will not be compiled }}</span> -->
+      <div class="m-auto mt-1">
+        <div
+          class="gap-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
+        >
+          <div
+            class="m-1 p-1"
+            v-for="product in productsList"
+            :key="product.id"
+            v-memo="[product.thumbnail]"
+            v-cloak
+          >
+            <ProductCard :product="product" />
+          </div>
+        </div>
+      </div>
+    </template>
   </TopicTitle>
-
-  <!-- <span v-pre>{{ <div>sadasd</div> this will not be compiled }}</span> -->
-   <div class="m-auto mt-1 w-[90%]">
-
-     <div
-       class="gap-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
-     >
-       <div
-         class="m-1 p-1"
-         v-for="product in productsList"
-         :key="product.id"
-         v-memo="[product.thumbnail]"
-         v-cloak
-       >
-         <ProductCard :product="product" />
-       </div>
-     </div>
-   </div>
 </template>
 
 <style lang="css" scoped>

@@ -20,7 +20,7 @@
   --white-1: #f7f8fa;
   --purple: #6a0dad;
 
-  --bgColor: #1A1E29;
+  --backgroundColor: #1A1E29;
   --primaryColor: #4E59C3;
   --card-background: #272E3E;
   --card-subtext: #A0A3B1;
@@ -39,7 +39,7 @@
 
 body {
   color: var(--white);
-  background-color: var(--bgColor);
+  background-color: var(--backgroundColor);
 
   font-optical-sizing: auto;
   /* font-weight: <weight>; */

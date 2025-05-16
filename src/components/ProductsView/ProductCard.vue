@@ -4,7 +4,7 @@
         class="justify-items-center content-center border-[var(--card-background)] border-2 rounded-2xl h-[100%] min-h-[328px] text-center"
         v-cloak>
         <div class="rounded-full w-40 h-auto">
-          <img class="rounded-2xl" :src="product.thumbnail" alt="" />
+          <img class="rounded-2xl w-[160px] h-[160px]" :src="product.thumbnail" alt="" />
         </div>
         <div class="flex flex-col items-center m-4">
           <div>{{ product.title }}</div>
