@@ -38,6 +38,10 @@ const projectsLinks = ref<ProjectLink[]>([
     name: 'Javascript Coding',
     link: '/javascript',
   },
+  {
+    name: 'Movies Api',
+    link: '/movies',
+  },
 ]);
 </script>
 

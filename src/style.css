@@ -2,18 +2,6 @@
 
 :root {
   --font-poppins: Poppins, sans-serif;
-  --golden-amber: #ffab57;
-  --grey-brown: #606060;
-  --charcoal-grey: #2a2a2a;
-  --silver-grey: #c0c0c0;
-  --stone-grey: #808080;
-
-  --dark-void: #151419;        /* fixed typo */
-  --liquid-lava: #f56e0f;
-  --gluon-grey: #1b1b1e;
-  --slate-grey: #262626;
-  --dusty-grey: #878787;       /* added # */
-  --snow: #fbfbfb;
 
   --black: #000000;
   --white: #ffffff;
@@ -30,7 +18,7 @@
   --buttonNormal: #7884F4;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
 
 * {
   box-sizing: border-box;
@@ -48,7 +36,9 @@ body {
 }
 
 #app {
-  min-height: 100vh;
+  height: 100lvh;
+  display: grid;
+  grid-template-rows: 6% auto;
 }
 
 /* Follow this page */

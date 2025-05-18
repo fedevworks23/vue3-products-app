@@ -4,6 +4,7 @@ import HomePage from '../views/HomePage.vue'
 
 // Products View Routes
 const Projects = () => import('../views/Projects.vue')
+const Movies = () => import('../components/Movies/Movies.vue')
 import ProductLists from '../components/ProductsView/ProductLists.vue'
 import ProductsDetails from '../components/ProductsDetails.vue'
 
@@ -20,6 +21,7 @@ import PageNotFound from '../views/PageNotFound.vue'
 
 const routes = [
   { path: '/', component: HomePage },
+  { path: '/movies', component: Movies },
   { path: '/projects', component: Projects },
   { path: '/product-lists', component: ProductLists },
   { path: '/productDetails/:id', component: ProductsDetails },
