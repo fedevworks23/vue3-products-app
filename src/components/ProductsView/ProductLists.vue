@@ -32,13 +32,13 @@ onMounted(() => {
       <div class="flex flex-row-reverse">
         <button
           @click="nextList()"
-          class="bg-[var(--backgroundColor)] hover:bg-[var(--card-background)] my-3 mr-2 px-5 py-2 border-[var(--card-subtext)] border-2 rounded-[8px] font-bold hover:text-[var(--card-subtext)] cursor-pointer"
+          class="bg-[var(--background)] hover:bg-[var(--accent)] my-3 mr-2 px-5 py-2 border-[var(--primary)] border-2 rounded-[8px] font-bold text-[var(--primary)] hover:text-[var(--background)] transition duration-500 ease-in-out cursor-pointer"
         >
           Next
         </button>
         <button
           @click="prevList()"
-          class="bg-[var(--backgroundColor)] hover:bg-[var(--card-background)] my-3 mr-2 px-5 py-2 border-[var(--card-subtext)] border-2 rounded-[8px] font-bold hover:text-[var(--card-subtext)] cursor-pointer"
+          class="bg-[var(--background)] hover:bg-[var(--accent)] my-3 mr-2 px-5 py-2 border-[var(--primary)] border-2 rounded-[8px] font-bold text-[var(--primary)] hover:text-[var(--background)] transition duration-500 ease-in-out cursor-pointer"
         >
           Prev
         </button>

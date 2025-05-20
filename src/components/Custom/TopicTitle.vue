@@ -1,6 +1,6 @@
 <template>
-  <div class="m-auto my-5 w-[90%] text-[var(--white)]">
-    <p class="mb-2 pb-3 text-2xl">
+  <div class="m-auto my-5 w-[90%] text-[var(--primary)]">
+    <p class="mb-2 pb-3 font-bold text-2xl">
       <slot name="title"></slot>
     </p>
     <hr />

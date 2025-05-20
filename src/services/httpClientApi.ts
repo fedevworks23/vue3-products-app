@@ -3,7 +3,7 @@ import httpClient from '../common/interceptor'
 
 const get_products_by_limit = async (limit: number, skip: number) => {
   try {
-    const { data } = await httpClient.get('/products' + `?limit=${limit}&skip=${skip}`)
+    const { data } = await httpClient.get('/products' + `?limit=${limit}&skip=${skip}&select=title,id,category,thumbnail,price`)
     return data.products
   } catch (err) {
     console.log(err)

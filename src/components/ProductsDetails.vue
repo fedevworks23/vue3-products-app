@@ -5,7 +5,7 @@
     <template #buttons>
       <div class="flex flex-row-reverse">
         <button
-          class="bg-[var(--backgroundColor)] hover:bg-[var(--card-background)] my-3 mr-2 px-5 py-2 border-[var(--card-subtext)] border-2 rounded-[8px] font-bold hover:text-[var(--card-subtext)] cursor-pointer"
+          class="bg-[var(--background)] hover:bg-[var(--secondary)] my-3 mr-2 px-5 py-2 border-[var(--card-subtext)] border-2 rounded-[8px] font-bold text-[var(--primary)] hover:text-[var(--background)] cursor-pointer"
           @click="goBack"
         >
           Back
@@ -16,12 +16,12 @@
 
   <template v-if="!productDetail">Loading</template>
 
-  <div class="bg-[var(--card-background)] m-auto mt-4 w-[80%]" v-else>
+  <div class="bg-[var(--background)] m-auto mt-4 w-[80%]" v-else>
     <div
-      class="flex xl:flex-row flex-col items-center shadow-[#ffffff] mx-auto my-10 p-3 border-[var(--buttonNormal)] border-2 rounded-2xl text-[var(--text-color)]"
+      class="flex xl:flex-row flex-col items-center shadow-[#ffffff] mx-auto my-10 p-3 border-[var(--primary)] border-2 rounded-2xl text-[var(--text-color)]"
     >
       <div
-        class="top-[-70px] xl:top-0 xl:left-[-5%] relative flex xl:flex-initial justify-center bg-[var(--backgroundColor)] mb-3 border-[var(--buttonNormal)] border-2 rounded-full lg:rounded-2xl transition-all duration-900 ease-in-out"
+        class="top-[-70px] xl:top-0 xl:left-[-5%] relative flex xl:flex-initial justify-center bg-[var(--primary)] mb-3 border-[var(--primary)] border-2 rounded-full lg:rounded-2xl transition-all duration-900 ease-in-out"
       >
         <img
           class="w-[300px]"

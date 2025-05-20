@@ -1,9 +1,9 @@
 <template>
-  <div class="content-center h-[100%] text-2xl">
+  <div class="justify-center content-center grid m-auto h-[80vh] text-2xl">
     <div class="flex flex-col">
       <div class="text-center">
         <!-- <span class="text-lg">Hi, I'm Sriman</span> -->
-        <span class="text-amber-300 text-6xl"> Frontend Developer Works </span>
+        <span class="font-bold text-[var(--primary)] text-6xl"> Frontend Developer Works </span>
       </div>
       <br />
       <span class="mt-5 text-2xl">

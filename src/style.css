@@ -1,24 +1,21 @@
 @import 'tailwindcss';
 
-:root {
-  --font-poppins: Poppins, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-  --black: #000000;
-  --white: #ffffff;
-  --white-1: #f7f8fa;
-  --purple: #6a0dad;
-
-  --backgroundColor: #1A1E29;
-  --primaryColor: #4E59C3;
-  --card-background: #272E3E;
-  --card-subtext: #A0A3B1;
-
-  --buttonClick: #4E59C3;
-  --buttonHover: #626EDE;
-  --buttonNormal: #7884F4;
+@theme {
+   --shadow-3xl: 0 1px 15px var(--accent); 
 }
 
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+:root {
+  --font-poppins: 'Inter', sans-serif;
+  --transition: 9s ease-in-out;
+
+  --text: #0a070f;
+  --background: #f6f5fa;
+  --primary: #7f60b3;
+  --secondary: #cf9bc5;
+  --accent: #c27fa5;
+}
 
 * {
   box-sizing: border-box;
@@ -26,19 +23,27 @@
 }
 
 body {
-  color: var(--white);
+  color: var(--text);
   background-color: var(--backgroundColor);
+  font-family: 'Inter', sans-serif;
 
   font-optical-sizing: auto;
   /* font-weight: <weight>; */
   font-style: normal;
   font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  height: 100vh;
 }
 
 #app {
-  height: 100lvh;
-  display: grid;
-  grid-template-rows: 6% auto;
+  /* display: grid;
+  grid-template-rows: 6% auto; */
+}
+.inter-normal {
+  font-family: 'Inter', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* Follow this page */
