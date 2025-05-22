@@ -1,14 +1,47 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 @theme {
-  --font-poppins: Poppins, sans-serif;
+   --price-shadow: 3px 3px var(--color-red-600); 
 }
 
-body{
-  background-color: #000000;
+:root {
+  --font-poppins: 'Inter', sans-serif;
+  --transition: 9s ease-in-out;
+
+  --text: #0a070f;
+  --background: #f6f5fa;
+  --primary: #7f60b3;
+  --secondary: #cf9bc5;
+  --accent: #c27fa5;
 }
 
-#app {
-  min-height: 100dvh;
-  color: #ffffff;
+* {
+  box-sizing: border-box;
+  /* border: 0 solid; */
 }
+
+body {
+  color: var(--text);
+  background-color: var(--backgroundColor);
+  font-family: 'Inter', sans-serif;
+
+  font-optical-sizing: auto;
+  /* font-weight: <weight>; */
+  font-style: normal;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  height: 100vh;
+}
+
+
+.inter-normal {
+  font-family: 'Inter', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Follow this page */
+/* https://in.pinterest.com/pin/584623595415303806/ */

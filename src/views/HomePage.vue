@@ -1,12 +1,25 @@
 <template>
-    <div>
-        <h1>Home Page</h1>
-
+  <div class="justify-center content-center grid m-auto h-[80vh] text-2xl">
+    <div class="flex flex-col">
+      <div class="text-center">
+        <!-- <span class="text-lg">Hi, I'm Sriman</span> -->
+        <span class="font-bold text-[var(--primary)] text-6xl"> Frontend Developer Works </span>
+      </div>
+      <br />
+      <span class="mt-5 text-2xl">
+        I am a passionate <code>frontend developer</code> with a strong focus on
+        creating user-friendly and visually appealing web applications.
+        <br />
+        I have a solid understanding of <code>HTML, CSS,</code> and
+        <code>JavaScript</code>, and I am proficient in using modern frontend
+        framework such as Vue.js. <br />
+        I have experience in building responsive and interactive web
+        applications that provide a seamless user experience.
+      </span>
     </div>
+  </div>
 </template>
 
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <style scoped></style>
