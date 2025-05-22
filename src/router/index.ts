@@ -6,7 +6,7 @@ import HomePage from '../views/HomePage.vue'
 const Projects = () => import('../views/Projects.vue')
 const Movies = () => import('../components/Movies/Movies.vue')
 import ProductLists from '../components/ProductsView/ProductLists.vue'
-import ProductsDetails from '../components/ProductsDetails.vue'
+import ProductsDetails from '../components/ProductsView/ProductsDetails.vue'
 
 
 // Javascript Coding
