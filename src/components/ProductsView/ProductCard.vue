@@ -18,7 +18,7 @@
           <div class="font-bold"> $ {{product.price}}</div>
           <div>
             <button
-              class="bg-[var(--background)] hover:bg-[var(--accent)] my-2 p-2 border-[var(--primary)] border-2 rounded-2xl w-auto h-auto font-bold text-[var(--primary)] hover:text-[var(--background)] transition-all duration-500 ease-in-out cursor-pointer"
+              class="bg-[var(--background)] hover:bg-[var(--accent)] my-2 px-[20px] py-[10px] border-[var(--primary)] border-2 rounded-2xl w-auto h-auto font-bold text-[var(--primary)] hover:text-[var(--background)] transition-all duration-500 ease-in-out cursor-pointer"
               @click="$router.push(`/productDetails/${product.id}`)"
             >
               View

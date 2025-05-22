@@ -36,7 +36,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  linkActiveClass: 'bg-[var(--primary)] border-1 border-[var(--text)] rounded-1xl text-[var(--text)]',
+  linkActiveClass: 'bg-[var(--background)] border-2 border-[var(--primary)] rounded-1xl text-[var(--text)]',
   history: createWebHistory(),
   routes,
 })

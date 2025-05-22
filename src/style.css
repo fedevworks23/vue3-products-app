@@ -35,10 +35,7 @@ body {
   height: 100vh;
 }
 
-#app {
-  /* display: grid;
-  grid-template-rows: 6% auto; */
-}
+
 .inter-normal {
   font-family: 'Inter', sans-serif;
   font-optical-sizing: auto;

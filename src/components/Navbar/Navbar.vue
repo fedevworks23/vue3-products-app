@@ -6,7 +6,7 @@
       <router-link
         v-for="navRoute in navRoutes"
         :key="navRoute.name"
-        class="bg-[var(--secondary)] hover:bg-[var(--accent)] m-2 p-4 font-bold text-[16px]/normal text-[var(--text)] hover:text-[var(--background)] transition-all hover:transition-all hover:duration-500 hover:ease-in-out"
+        class="m-2 px-[20px] py-[10px] border-2 border-amber-50 hover:border-[var(--primary)] font-bold text-[16px]/normal text-[var(--text)] transition-all hover:transition-all hover:duration-500 hover:ease-in-out"
         :to="navRoute.path"
         >{{ navRoute.name }}</router-link
       >
