@@ -14,6 +14,10 @@ const JavascriptComponent = () => import('../components/JavascriptComponent/Java
 const JavasciptTitle = () => import('../components/JavascriptComponent/JavasciptTitle.vue')
 const JavasciptAnswer = () => import('../components/JavascriptComponent/JavasciptAnswer.vue')
 
+//Custom Components
+const CustomComponents = () => import('../views/CustomComponents.vue')
+import ColorCodes from '../components/Custom/ColorCodes.vue'
+
 
 
 // Page Not Found View
@@ -32,11 +36,17 @@ const routes = [
       { path: '/javascript-coding/:id', component: JavasciptAnswer },
     ],
   },
+  //Custom Component Routes
+  { path: '/custom-components', name: 'CustomComponents', component: CustomComponents },
+  { path: '/custom-components/color-codes', name: 'ColorCodes', component: ColorCodes },
+
+  // Catch-all route for 404 Page Not Found
+  // This should be the last route in the array
   { path: '/:pathMatch(.*)*', component: PageNotFound },
 ]
 
 const router = createRouter({
-  linkActiveClass: 'bg-[var(--background)] border-1 border-[var(--primary)] text-[var(--primary)]',
+  linkActiveClass: 'bg-[var(--background)] text-[var(--primary)] inset-shadow-sm inset-shadow-indigo-500',
   history: createWebHistory(),
   routes,
 })
