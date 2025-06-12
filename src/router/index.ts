@@ -48,7 +48,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  linkActiveClass: 'bg-[var(--background)] text-[var(--primary)] inset-shadow-sm inset-shadow-indigo-500',
+  linkActiveClass: 'underline underline-offset-8',
   history: createWebHistory(),
   routes,
 })

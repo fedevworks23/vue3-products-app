@@ -6,9 +6,9 @@
       <router-link
         v-for="navRoute in navRoutes"
         :key="navRoute.name"
-        class="inset-shadow inset-shadow-sm hover:inset-shadow-lg m-2 px-[20px] py-[10px] border-[var(--primary)] hover:border-[var(--primary)] rounded-[10px] text-[16px]/normal text-[var(--text)] hover:text-[var(--accent)] transition-all hover:transition-all hover:duration-500 hover:ease-in-out"
+        class="m-2 px-[20px] py-[10px] border-[var(--primary)] hover:border-[var(--primary)] rounded-[10px] text-[16px]/normal text-[var(--text)] hover:text-[var(--accent)] hover:underline underline-offset-8 transition-all hover:transition-all hover:duration-500 hover:ease-in-out"
         :to="navRoute.path"
-        >{{ navRoute.name }}</router-link
+        ><span>{{ navRoute.name }}</span></router-link
       >
     </div>
   </header>
@@ -35,4 +35,5 @@ const navRoutes = [
 ]
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>
