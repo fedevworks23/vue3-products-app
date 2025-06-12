@@ -4,10 +4,10 @@
       <div class="relative watermark2"></div>
       <div class="container">
         <div class="relative flex flex-row justify-center hero-content">
-          <div class="relative flex-2/3 details">
+          <div class="relative flex-1 details">
             <h1
               class="z-0 relative font-extrabold text-[4rem] text-base/18.5 letter-spacing-[0.2rem] quicksand-500"
-              :style="{ margin: '-60px -60px 30px 240px' }"
+              :style="{ margin: '-60px -60px 30px 320px' }"
             >
               <span>
                 My Self,
@@ -37,7 +37,7 @@
             >
           </div>
 
-          <div class="flex-2/3 image">
+          <div class="flex-1 image">
             <img
               class="hover:z-2 hover:shadow-2xl rounded-2xl w-[400px] h-[500px] hover:scale-105 transition-all duration-500 ease-in-out cursor-pointer"
               src="https://maraviyainfotech.com/wrapbootstrap/brog-package/brog-bootstrap/assets/img/hero/my-img.png"
@@ -48,9 +48,7 @@
             ></span>
           </div>
 
-          <div
-            class="relative flex-2/3 text-[#555555] text-[38px] text-base/14 profession"
-          >
+          <div class="relative flex-1 text-[#555555] text-[38px] text-base/14 profession">
             <h1 class="bottom-0 absolute">
               I am a,
               <br />

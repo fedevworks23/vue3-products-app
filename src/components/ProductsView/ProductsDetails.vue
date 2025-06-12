@@ -31,13 +31,23 @@
       </div>
 
       <div class="flex flex-col bg-[var(--background)] lg:w-[50%]">
-        <div class="m-4 font-bold text-[20px]">
+        <div
+          class="after:bottom-0 after:left-0 after:absolute relative after:bg-[#12263a] m-4 mx-[1rem] my-[16px] after:w-[80px] after:h-[4px] font-bold text-[#12263a] text-[2rem] after:content-['']"
+        >
           {{ productDetail?.title }}
         </div>
 
-        <div class="mx-4 font-light text-[#00000077] text-[20px]">
+        <span
+          class="inline-block mx-4 px-0 py-[0.3rem] font-medium text-[#12263a] text-[0.9rem]"
+        >
+          <!-- {{ productDetail?.category }} -->
           {{ productDetail.brand }}
-        </div>
+        </span>
+
+        <span class="inline-block mx-4 px-0 py-[0.3rem] font-medium text-[#12263a] text-[0.9rem]">
+          Rating {{ productDetail.rating }}
+        </span>
+
 
         <div class="m-4 text-[20px]">
           Dimensions
@@ -48,26 +58,26 @@
           >
         </div>
 
-        <div class="m-4">
-          <span
-            class="bg-amber-400 shadow-[var(--price-shadow)] p-3 font-bold text-[28px]"
-            ><span class="text-[14px]">$ &nbsp;</span
-            >{{ productDetail?.price }}</span
-          >
-          &nbsp;
-          <span class="bg-red-700 p-2 rounded-full text-amber-50"
-            >- {{ productDetail?.discountPercentage }} %</span
-          >
-          <span
-            class="ml-1 p-4 font-bold text-[#00000077] text-[18px] line-through"
-            >$
-            {{
-              originalPrice(
-                productDetail.price,
-                productDetail?.discountPercentage
-              )
-            }}</span
-          >
+        <div class="m-4 font-bold text-[1rem]">
+          <p class="last-price">
+            Old Price:
+            <span class="text-[#f64749] line-through"
+              >$
+              {{
+                originalPrice(
+                  productDetail.price,
+                  productDetail?.discountPercentage
+                )
+              }}</span
+            >
+          </p>
+          <p class="new-price">
+            New Price:
+            <span
+              >$ {{ productDetail?.price }} ( -
+              {{ productDetail?.discountPercentage }} %)</span
+            >
+          </p>
         </div>
 
         <div class="flex flex-row">
@@ -81,53 +91,70 @@
           </span>
         </div>
 
-        <hr class="border-[var(--accent)] border-b-1" />
-
-        <div>
-          <table class="m-4 w-[100%] lg:w-[75%] xl:w-[90%]">
-            <tr>
-              <td class="font-bold">Warranty</td>
-              <td>{{ productDetail?.warrantyInformation }}</td>
-            </tr>
-            <tr>
-              <td class="font-bold">In Stock</td>
-              <td>{{ productDetail?.stock }}</td>
-            </tr>
-            <tr>
-              <td class="font-bold">ReturnPolicy</td>
-              <td>{{ productDetail?.returnPolicy }}</td>
-            </tr>
-            <tr>
-              <td class="font-bold">Delivery</td>
-              <td>{{ productDetail?.shippingInformation }}</td>
-            </tr>
-            <tr>
-              <td class="font-bold">Availability</td>
-              <td>{{ productDetail?.availabilityStatus }}</td>
-            </tr>
-            <tr>
-              <td class="font-bold">Tags</td>
-              <td><span v-for="tag in productDetail?.tags" :key="tag">| {{ captalise(tag) }} | </span></td>
-            </tr>
-            <tr>
-              <td class="font-bold">Scan QR Code</td>
-              <td>
-                <img
-                  class="w-[50px]"
-                  :src="productDetail?.meta?.qrCode"
-                  alt=""
-                />
-              </td>
-            </tr>
-          </table>
+        <div class="mx-4 font-bold text-[#12263a] text-[1.5em] capitalize">
+          about this item:
+        </div>
+        <div class="m-4 font-light text-[#12263a]">
+          {{ productDetail?.description }}
         </div>
 
-        <div>
-          <div class="m-4 font-bold text-[20px]">Description</div>
-          <div class="m-4 font-light text-[#00000077]">
-            {{ productDetail?.description }}
-          </div>
-        </div>
+        <ul>
+          <li
+            class="bg-[url(/src/assets/checked.png)] bg-no-repeat pl-7 bg-size-[20px] font-semibold"
+          >
+            Warranty:
+            <span class="font-normal">{{
+              productDetail?.warrantyInformation
+            }}</span>
+          </li>
+          <li
+            class="bg-[url(/src/assets/checked.png)] bg-no-repeat pl-7 bg-size-[20px] font-semibold"
+          >
+            Available:
+            <span class="font-normal">in stock {{ productDetail?.stock }}</span>
+          </li>
+          <li
+            class="bg-[url(/src/assets/checked.png)] bg-no-repeat pl-7 bg-size-[20px] font-semibold"
+          >
+            ReturnPolicy:
+            <span class="font-normal">{{ productDetail?.returnPolicy }}</span>
+          </li>
+          <li
+            class="bg-[url(/src/assets/checked.png)] bg-no-repeat pl-7 bg-size-[20px] font-semibold"
+          >
+            Delivery:
+            <span class="font-normal">{{
+              productDetail?.shippingInformation
+            }}</span>
+          </li>
+          <li
+            class="bg-[url(/src/assets/checked.png)] bg-no-repeat pl-7 bg-size-[20px] font-semibold"
+          >
+            Availability:
+            <span class="font-normal">{{
+              productDetail?.availabilityStatus
+            }}</span>
+          </li>
+          <li
+            class="bg-[url(/src/assets/checked.png)] bg-no-repeat pl-7 bg-size-[20px] font-semibold"
+          >
+            Tags:
+            <span class="font-normal">
+              <span v-for="tag in productDetail?.tags" :key="tag"
+                >| {{ captalise(tag) }} |
+              </span></span
+            >
+          </li>
+          <li
+            class="bg-[url(/src/assets/checked.png)] bg-no-repeat pl-7 bg-size-[20px] font-semibold"
+          >
+            Scan QR Code:
+            <span class="font-normal"
+              ><img class="w-[50px]" :src="productDetail?.meta?.qrCode" alt=""
+            /></span>
+          </li>
+        </ul>
+        
       </div>
     </div>
   </div>

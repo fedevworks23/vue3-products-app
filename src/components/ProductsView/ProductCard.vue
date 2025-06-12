@@ -1,24 +1,26 @@
 <template>
-  <div class="w-auto min-w-[210px] product-card">
+  <div class="w-[234px] product-card">
     <div
-      class="flex flex-col justify-items-center content-center bg-[var(--background)] shadow-md hover:shadow-3xl m-1 p-1 border-[var(--primary)] border-1 hover:border-0 rounded-[24px] h-[100%] min-h-[300px] text-[var(--text)] text-center transition-all duration-100 ease-in-out cursor-pointer"
+      class="flex flex-col justify-items-center items-center content-center bg-[#fdfdfde0] shadow-(--card-shadow) hover:shadow-xl/30 m-1 p-3 rounded-[24px] h-[100%] min-h-[300px] text-[var(--text)] text-center transition-all duration-100 ease-in-out cursor-pointer"
       v-cloak
     >
-      <div class="flex justify-center items-center mb-2">
-        <img class="drop-shadow-lg w-[160px] h-[160px]" :src="product.thumbnail" alt="" />
+      <div class="flex justify-center items-center bg-[#EFEAE6] mb-2 rounded-[20px] w-[200px] h-[200px]">
+        <img class="drop-shadow-lg" :src="product.thumbnail" alt="" />
       </div>
+
+      <!-- Title -->
       <div
-        class="flex flex-col bg-[var(--primary)] p-2 px-3 rounded-[20px] w-[100%] text-[var(--background)] text-left"
+        class="flex flex-col bg-[#fdfdfde0] p-2 px-3 rounded-[20px] w-[100%] text-[#141414] text-left"
       >
         <div class="flex items-center h-[50px] font-bold">
           {{ product.title }}
         </div>
         <!-- <div>Category: {{ capitalizeFirstLetter(product.category) }}</div> -->
-        <div class="flex flex-row justify-between items-center w-[100%]">
+        <div class="flex flex-row justify-between items-center w-[100%] text-[#727171]">
           <div class="font-bold"> $ {{product.price}}</div>
           <div>
             <button
-              class="bg-[var(--background)] hover:bg-[var(--accent)] my-2 px-[20px] py-[10px] border-[var(--primary)] border-2 rounded-2xl w-auto h-auto font-bold text-[var(--primary)] hover:text-[var(--background)] transition-all duration-500 ease-in-out cursor-pointer"
+              class="bg-[#EFEAE6] hover:bg-[#fdfdfde0] my-2 px-[20px] py-[10px] border-1 hover:border-[#EFEAE6] rounded-2xl w-auto h-auto font-bold text-[var(--primary)] hover:text-[#141414] transition-all duration-500 ease-in-out cursor-pointer"
               @click="$router.push(`/productDetails/${product.id}`)"
             >
               View

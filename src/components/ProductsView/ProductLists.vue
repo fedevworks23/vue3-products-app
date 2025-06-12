@@ -22,9 +22,10 @@ onMounted(() => {
 <template>
   
   <!-- <span v-pre>{{ <div>sadasd</div> this will not be compiled }}</span> -->
+  <!-- class="gap-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" -->
   <div class="m-auto mt-1">
     <div
-      class="gap-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+      class="flex flex-wrap gap-2"
     >
       <div
         class="m-1 p-1"
