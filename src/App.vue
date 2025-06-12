@@ -5,7 +5,7 @@ import Navbar from './components/Navbar/Navbar.vue'
 <template>
   <Navbar />
 
-  <div class="m-auto mt-[1%] w-[90%]">
+  <div class="m-auto mt-[1%] w-[100%]">
     <router-view></router-view>
   </div>
 </template>

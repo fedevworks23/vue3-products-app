@@ -33,7 +33,7 @@ interface ProjectLink {
 const projectsLinks = ref<ProjectLink[]>([
   {
     name: 'Products Api',
-    link: '/product-lists',
+    link: '/products',
   },
   {
     name: 'Javascript Coding',

@@ -30,6 +30,12 @@ export interface Product {
     weight: number;
 }
 
+export interface CategoryList {
+    slug: string;
+    name: string;
+    url: string;
+}
+
 export enum AvailabilityStatus {
     InStock = "In Stock",
     LowStock = "Low Stock",
