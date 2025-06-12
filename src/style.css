@@ -1,7 +1,9 @@
 @import 'tailwindcss';
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'); */
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300..700&family=Savate:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 /* @theme {
    --price-shadow: 3px 3px var(--color-red-600); 
 } */
@@ -11,7 +13,7 @@
   --transition: 9s ease-in-out;
 
   --text: #0a070f;
-  --background: #f6f5fa;
+  --background: #ffffffe6;
   --primary: #7f60b3;
   --secondary: #cf9bc5;
   --accent: #c27fa5;
@@ -19,29 +21,82 @@
 
 * {
   box-sizing: border-box;
-  /* border: 0 solid; */
 }
 
 body {
   color: var(--text);
   background-color: var(--backgroundColor);
-  font-family: 'Inter', sans-serif;
-
   font-optical-sizing: auto;
-  /* font-weight: <weight>; */
   font-style: normal;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   scroll-behavior: smooth;
   height: 100vh;
 }
 
-
-.inter-normal {
-  font-family: 'Inter', sans-serif;
+.quicksand-500 {
+  font-family: 'Quicksand', sans-serif;
   font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+.poppins-thin {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
+.poppins-medium {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+#app {
+  font-family: 'Quicksand', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
 /* Follow this page */
 /* https://in.pinterest.com/pin/584623595415303806/ */
