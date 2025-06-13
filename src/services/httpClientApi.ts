@@ -1,8 +1,9 @@
 import httpClient from '../common/interceptor'
 
-const get_all_products = async () => {
+
+const get_products_by_limit = async (limit: number, skip: number) => {
   try {
-    const { data } = await httpClient.get('/products')
+    const { data } = await httpClient.get('/products' + `?limit=${limit}&skip=${skip}`)
     return data.products
   } catch (err) {
     console.log(err)
@@ -19,9 +20,9 @@ const get_single_product = async (id: string) => {
   }
 }
 
-const get_product_by_category = async (categoryName: string) => {
+const get_product_category_list = async () => {
   try {
-    const { data } = await httpClient.get(`/products/category/${categoryName}`)
+    const { data } = await httpClient.get('/products/categories')
     return data
   } catch (error) {
     console.log(error);
@@ -29,4 +30,14 @@ const get_product_by_category = async (categoryName: string) => {
   }
 }
 
-export { get_all_products, get_single_product, get_product_by_category }
+const get_products_by_category = async (categoryName: string) => {
+  try {
+    const { data } = await httpClient.get(`/products/category/${categoryName}`)
+    return data.products
+  } catch (error) {
+    console.log(error);
+
+  }
+}
+
+export {  get_single_product, get_product_category_list, get_products_by_category, get_products_by_limit }

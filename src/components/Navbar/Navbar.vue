@@ -1,17 +1,39 @@
 <template>
-    <div class="flex flex-row justify-between px-5 py-3 font-medium text-[14px] ">
-        <div>
-            <router-link to="/">Brand Name</router-link>
-        </div>
-        <div>
-            <router-link class="mr-4" to="/projects">Projects</router-link>
-            <router-link to="/all-categories">Categories</router-link>
-        </div>
+  <header
+    class="flex justify-center shadow-md m-auto font-medium text-[14px] text-center"
+  >
+    <div class="px-[10px] py-[24px]">
+      <router-link
+        v-for="navRoute in navRoutes"
+        :key="navRoute.name"
+        class="m-2 px-[20px] py-[10px] border-[var(--primary)] hover:border-[var(--primary)] rounded-[10px] text-[16px]/normal text-[var(--text)] hover:text-[var(--accent)] hover:underline underline-offset-8 transition-all hover:transition-all hover:duration-500 hover:ease-in-out"
+        :to="navRoute.path"
+        ><span>{{ navRoute.name }}</span></router-link
+      >
     </div>
+  </header>
 </template>
 
 <script setup lang="ts">
-
+const navRoutes = [
+  {
+    path: '/',
+    name: 'Home',
+  },
+  {
+    path: '/projects',
+    name: 'Projects',
+  },
+  {
+    path: '/all-categories',
+    name: 'Categories',
+  },
+  {
+    path: '/custom-components',
+    name: 'CustomComponents',
+  },
+]
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>

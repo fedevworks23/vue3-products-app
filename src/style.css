@@ -1,14 +1,118 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300..700&family=Savate:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 @theme {
-  --font-poppins: Poppins, sans-serif;
+  --card-shadow: 0px 0px 15px -10px;
 }
 
-body{
-  background-color: #000000;
+:root {
+  --font-poppins: 'Inter', sans-serif;
+  --transition: 9s ease-in-out;
+
+  --text: #0a070f;
+  --background: #ffffffe6;
+  --primary: #7f60b3;
+  --secondary: #cf9bc5;
+  --accent: #c27fa5;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--text);
+  background-color: var(--backgroundColor);
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-family: 'Quicksand', sans-serif;
+  scroll-behavior: smooth;
+  height: 100vh;
+}
+html {
+  --s: 132px; /* control the size*/
+  --c1: #f5f5f585;
+  --c2: #ffffffd2;
+
+  --_g: #0000 90deg, var(--c1) 0;
+  background:
+    conic-gradient(from 90deg at 2px 2px, var(--_g)),
+    conic-gradient(from 90deg at 1px 1px, var(--_g)), var(--c2);
+  background-size:
+    var(--s) var(--s),
+    calc(var(--s) / 6) calc(var(--s) / 9);
+
+    cursor: url('/src/assets/mac-cursor.png'), default;	
+    /* cursor: url('/src/assets/mac-hand-cursor.png'), pointer;	 */
+}
+
+.quicksand-500 {
+  font-family: 'Quicksand', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+.poppins-thin {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
 #app {
-  min-height: 100dvh;
-  color: #ffffff;
+  font-family: 'Quicksand', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
+/* Follow this page */
+/* https://in.pinterest.com/pin/584623595415303806/ */
